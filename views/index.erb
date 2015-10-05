@@ -3,22 +3,30 @@
 	<head>
 		<meta charset="utf8">
 		<title>送信フォーム</title>
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="shortcut icon" href="favicon.ico">
+   		<link rel="icon" type="image/gif" href="animated_favicon1.gif">
 	</head>
 	<body>
-		<a href="/about" target="_blank">このアプリについて</a>
+		<div class="container-fluid">
+			<div class="app">
+				<a href="/about" target="_blank">このアプリについて</a>
+			</div>
 		<form action="check" method="POST" role="form">
-			<div>
+			<div class="form-group">
 				<label for="input-mail">メールアドレス</label>
 				<input name="email" type="email" class="form-control" id="input-mail">
 			</div>
-			<div>
+			<div class="form-group">
 				<label for="text">内容</label>
 				<textarea name="message" class="form-control" id="text"></textarea>
 			</div>
 			<div>
 					受信件数 <%=@count%>件
 				</div>
-			<input type="submit" svalue="OK">
+			<input type="submit" class="btn btn-info" value="OK">
 		</form>
+		</div>
 	</body>
 </html>

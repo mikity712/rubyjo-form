@@ -3,9 +3,12 @@
 	<head>
 		<meta charset="utf8">
 		<title>確認画面</title>
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="shortcut icon" href="favicon.ico" >
 	</head>
 	<body>
-		<div>
+		<div class="container-fluid">
 			<h1>確認</h1>
 			<div>
 				email: <%=@email%>
@@ -18,11 +21,11 @@
 			</div>
 			<p>送信します。よろしいですか。</p>
 			<div>
-				<a href="/">戻る</a>
 			<form action="send-mail" method="POST">
+				<a class="btn btn-warning" href="/">戻る</a>
 				<input type="hidden" name="email" value="<%=@email%>">
 				<input type="hidden" name="message" value="<%=@message%>">
-				<input type="submit" value="進む">
+				<input type="submit" class="btn btn-info" value="進む">
 			</form>
 			</div>
 		</div>
